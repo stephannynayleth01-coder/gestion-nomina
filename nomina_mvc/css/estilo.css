@@ -1,0 +1,268 @@
+/* css/estilos.css */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f2f4f7;
+    margin: 0;
+    color: #1f2937;
+    padding: 20px; /* Padding general para que las tablas no toquen los bordes */
+}
+
+h1, h2, h3 {
+    color: #1e3a8a;
+}
+
+/* ---------- Pantallas de autenticación (login / recuperar / restablecer) ---------- */
+
+.contenedor-auth {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.tarjeta {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    width: 100%;
+    max-width: 380px;
+}
+
+
+.subtitulo {
+    color: #6b7280;
+    margin-top: -8px;
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.campo {
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ---------- Formularios Globales (Inputs y Selects) ---------- */
+
+.campo input, 
+input[type="text"], 
+input[type="number"], 
+input[type="email"], 
+input[type="password"], 
+select {
+    width: 100%;
+    max-width: 350px; /* Evita que los inputs sean gigantes en pantallas anchas */
+    padding: 8px 10px; /* Padding más pequeño para un aspecto menos brusco */
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.campo input:focus, 
+input:focus, 
+select:focus {
+    outline: none;
+    border-color: #1e3a8a;
+    box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+}
+
+table input, table select {
+    width: auto;
+    min-width: 120px; /* Reducción de tamaño en las tablas */
+}
+
+/* ---------- Botones Globales ---------- */
+
+button, .boton {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: inherit;
+    transition: background-color 0.2s;
+}
+
+button[type="submit"]:hover, .boton-primario:hover {
+    background-color: #16306e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button[type="button"]:hover, .boton-secundario:hover {
+    background-color: #d1d5db;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boton-bloque {
+    display: block;
+    width: 100%;
+    margin-top: 8px;
+}
+
+/* ---------- Alertas ---------- */
+
+.alerta {
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.alerta-error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alerta-exito {
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.codigo-simulado {
+    display: inline-block;
+    font-size: 1.3rem;
+    letter-spacing: 4px;
+    margin: 4px 0;
+}
+
+/* ---------- Enlaces ---------- */
+
+.enlaces {
+    margin-top: 18px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+a {
+    color: #1e3a8a;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Tablas (Vistas de Administrador y Empleado) ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+table th, table td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilo alterno para las filas de las tablas */
+table tbody tr:nth-child(even) {
+    background-color: #f9fafb;
+}
+
+table tbody tr:hover {
+    background-color: #f3f4f6;
+}
+
+/* Pequeño ajuste para que los íconos se alineen bien con el texto y se vean ordenados */
+.material-symbols-outlined {
+    vertical-align: middle;
+}
+
+.acciones-tabla a {
+    text-decoration: none;
+    color: #333;
+}
+
+.acciones-tabla a:hover {
+    color: #1e3a8a;
+}
+
+/* ---------- Navegación Superior ---------- */
+.header-nav {
+    background-color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.header-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+    color: #1e3a8a;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.header-nav a:hover {
+    background-color: #f3f4f6;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* ---------- Footer ---------- */
+.footer-nomina {
+    margin-top: 50px;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #e5e7eb;
+    background-color: transparent;
+}
+
+.footer-nomina .titulo-footer {
+    color: #4b5563;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin: 0 0 5px 0;
+}
+
+.footer-nomina .integrantes {
+    color: #9ca3af;
+    font-size: 0.75rem;
+    margin: 0;
+}
