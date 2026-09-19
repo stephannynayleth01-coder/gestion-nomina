@@ -109,7 +109,7 @@ class Empleado
 
     public function eliminar($id_usuario)
     {
-        // Borrado lógico: Cambiamos el estado a INACTIVO
+        // Borrado lógico: Cambiamos el estado a INACTIVO 
         $sql = "UPDATE usuarios SET estado = 'INACTIVO' WHERE id_usuario = ?";
         $stmt = mysqli_prepare($this->conexion, $sql);
         if ($stmt) {
